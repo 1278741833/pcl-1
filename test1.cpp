@@ -41,8 +41,8 @@ bool SplitBuffer(const char *strBuffer)
 	}
 	memset(&txt_points, 0, sizeof(struct TXT_Point_XYZ));
 	double r = angle * pi / 180;
-	txt_points.x = distance * sin(r);
-	txt_points.y = distance * cos(r);
+	txt_points.x = distance * cos(r);
+	txt_points.y = distance * sin(r);
 	txt_points.z = 0;
 
 	my_vTxtPoints.push_back(txt_points);
@@ -53,7 +53,7 @@ bool SplitBuffer(const char *strBuffer)
 int main()
 {
 	CDir Dir;
-	if (Dir.OpenDir("/home/zxy/", "*.CSV", 50000, false, false) == false)
+	if (Dir.OpenDir("/home/agv/", "*.CSV", 50000, false, false) == false)
 	{
 		printf("Dir.OpenDir failed\n");
 		return -1;
